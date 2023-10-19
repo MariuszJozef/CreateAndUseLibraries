@@ -1,0 +1,9 @@
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+
+# find_dependency(xyz 1.0)
+
+include("${CMAKE_CURRENT_LIST_DIR}/@packageName@Targets.cmake")
+
+check_required_components("@PROJECT_NAME@")

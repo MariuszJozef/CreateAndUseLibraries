@@ -1,0 +1,88 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "CreateAndUseLibraries (Debug) Windows",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "windows": {
+                // Adjust the path to the Debug executable (rebuild before debugging!)
+                "program": "${workspaceFolder}/Demo/LibrariesWithConfigCMake/CreateAndUseLibraries/buildNinjaMC/Msvc/buildOut/UseCreatedLibsNeedsCpp11/bin/Debug/UseCreatedLibraries_d.exe"
+/*
+                "program": "${workspaceFolder}/Cpp/Demo/LibrariesWithConfigCMake/CreateAndUseLibraries/buildMake/Gnu/buildOut/UseCreatedLibsNeedsCpp11/bin/Debug/UseCreatedLibraries_d.exe"
+                "program": "${workspaceFolder}/Cpp/Demo/LibrariesWithConfigCMake/CreateAndUseLibraries/buildMake/Clang/buildOut/UseCreatedLibsNeedsCpp11/bin/Debug/UseCreatedLibraries_d.exe"
+                "program": "${workspaceFolder}/Cpp/Demo/LibrariesWithConfigCMake/CreateAndUseLibraries/buildNMake/Msvc/buildOut/UseCreatedLibsNeedsCpp11/bin/Debug/UseCreatedLibraries_d.exe"
+                "program": "${workspaceFolder}/Cpp/Demo/LibrariesWithConfigCMake/CreateAndUseLibraries/buildNinja/Gnu/buildOut/UseCreatedLibsNeedsCpp11/bin/Debug/UseCreatedLibraries_d.exe"
+                "program": "${workspaceFolder}/Cpp/Demo/LibrariesWithConfigCMake/CreateAndUseLibraries/buildNinja/Clang/buildOut/UseCreatedLibsNeedsCpp11/bin/Debug/UseCreatedLibraries_d.exe"
+                "program": "${workspaceFolder}/Cpp/Demo/LibrariesWithConfigCMake/CreateAndUseLibraries/buildNinja/Msvc/buildOut/UseCreatedLibsNeedsCpp11/bin/Debug/UseCreatedLibraries_d.exe"
+                "program": "${workspaceFolder}/Cpp/Demo/LibrariesWithConfigCMake/CreateAndUseLibraries/buildNinjaMC/Gnu/buildOut/UseCreatedLibsNeedsCpp11/bin/Debug/UseCreatedLibraries_d.exe"
+                "program": "${workspaceFolder}/Cpp/Demo/LibrariesWithConfigCMake/CreateAndUseLibraries/buildNinjaMC/Clang/buildOut/UseCreatedLibsNeedsCpp11/bin/Debug/UseCreatedLibraries_d.exe"
+                "program": "${workspaceFolder}/Cpp/Demo/LibrariesWithConfigCMake/CreateAndUseLibraries/buildNinjaMC/Msvc/buildOut/UseCreatedLibsNeedsCpp11/bin/Debug/UseCreatedLibraries_d.exe"
+                "program": "${workspaceFolder}/Cpp/Demo/LibrariesWithConfigCMake/CreateAndUseLibraries/buildVS/x32/Msvc/buildOut/UseCreatedLibsNeedsCpp11/bin/Debug/UseCreatedLibraries_d.exe"
+                "program": "${workspaceFolder}/Cpp/Demo/LibrariesWithConfigCMake/CreateAndUseLibraries/buildVS/x64/Msvc/buildOut/UseCreatedLibsNeedsCpp11/bin/Debug/UseCreatedLibraries_d.exe"
+*/
+            },
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "CreateAndUseLibraries (Debug) Linux/Mac",
+            "type": "cppdbg",
+            "request": "launch",
+            // Adjust the path to the Debug executable (rebuild before debugging!)
+            "linux": {
+                "program": "${workspaceFolder}/Demo/LibrariesWithConfigCMake/CreateAndUseLibraries/buildNinjaMC/Gnu/buildOut/UseCreatedLibsNeedsCpp11/bin/Debug/UseCreatedLibraries_d"
+            },
+            "osx": {
+                "program": "${workspaceFolder}/Demo/LibrariesWithConfigCMake/CreateAndUseLibraries/buildNinjaMC/Clang/buildOut/UseCreatedLibsNeedsCpp11/bin/Debug/UseCreatedLibraries_d"
+            },
+/*
+            "program": "${workspaceFolder}/Cpp/Demo/LibrariesWithConfigCMake/CreateAndUseLibraries/buildMake/Gnu/buildOut/UseCreatedLibsNeedsCpp11/bin/Debug/UseCreatedLibraries_d",
+            "program": "${workspaceFolder}/Cpp/Demo/LibrariesWithConfigCMake/CreateAndUseLibraries/buildMake/Clang/buildOut/UseCreatedLibsNeedsCpp11/bin/Debug/UseCreatedLibraries_d",
+            "program": "${workspaceFolder}/Cpp/Demo/LibrariesWithConfigCMake/CreateAndUseLibraries/buildNMake/Msvc/buildOut/UseCreatedLibsNeedsCpp11/bin/Debug/UseCreatedLibraries_d",
+            "program": "${workspaceFolder}/Cpp/Demo/LibrariesWithConfigCMake/CreateAndUseLibraries/buildNinja/Gnu/buildOut/UseCreatedLibsNeedsCpp11/bin/Debug/UseCreatedLibraries_d",
+            "program": "${workspaceFolder}/Cpp/Demo/LibrariesWithConfigCMake/CreateAndUseLibraries/buildNinja/Clang/buildOut/UseCreatedLibsNeedsCpp11/bin/Debug/UseCreatedLibraries_d",
+            "program": "${workspaceFolder}/Cpp/Demo/LibrariesWithConfigCMake/CreateAndUseLibraries/buildNinja/Msvc/buildOut/UseCreatedLibsNeedsCpp11/bin/Debug/UseCreatedLibraries_d",
+            "program": "${workspaceFolder}/Cpp/Demo/LibrariesWithConfigCMake/CreateAndUseLibraries/buildNinjaMC/Gnu/buildOut/UseCreatedLibsNeedsCpp11/bin/Debug/UseCreatedLibraries_d",
+            "program": "${workspaceFolder}/Cpp/Demo/LibrariesWithConfigCMake/CreateAndUseLibraries/buildNinjaMC/Clang/buildOut/UseCreatedLibsNeedsCpp11/bin/Debug/UseCreatedLibraries_d",
+            "program": "${workspaceFolder}/Cpp/Demo/LibrariesWithConfigCMake/CreateAndUseLibraries/buildNinjaMC/Msvc/buildOut/UseCreatedLibsNeedsCpp11/bin/Debug/UseCreatedLibraries_d",
+            "program": "${workspaceFolder}/Cpp/Demo/LibrariesWithConfigCMake/CreateAndUseLibraries/buildVS/x32/Msvc/buildOut/UseCreatedLibsNeedsCpp11/bin/Debug/UseCreatedLibraries_d",
+            "program": "${workspaceFolder}/Cpp/Demo/LibrariesWithConfigCMake/CreateAndUseLibraries/buildVS/x64/Msvc/buildOut/UseCreatedLibsNeedsCpp11/bin/Debug/UseCreatedLibraries_d",
+*/
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}
