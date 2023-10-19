@@ -8,6 +8,10 @@ Here is a sibling program that uses the `<packageName>Config.cmake` file to link
 
 Here is the project structure:
 ```
+git clone --depth 1 https://github.com/MariuszJozef/CreateAndUseLibraries.git
+cd CreateAndUseLibraries
+```
+```
 .
 ├── CMakeLists.txt
 ├── CMakePresets.json

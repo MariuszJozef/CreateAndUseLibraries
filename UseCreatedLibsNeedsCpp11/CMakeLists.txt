@@ -56,8 +56,6 @@ target_compile_definitions(targetExe
         CREATE_AND_USE_LIBRARIES
 )
 
-# target_link_options(targetExe PRIVATE )
-
 #[==================================================[
 On Windows copy *.dll needed at runtime by the .exe into the same directory as the .exe
 #]==================================================]
