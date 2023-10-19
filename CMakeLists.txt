@@ -62,11 +62,11 @@ else()
     message(STATUS "BUILD_SHARED_LIBS: " ${BUILD_SHARED_LIBS} " --- targetSharedOrStaticLib will be built as STATIC library")
 endif()
 
-# Needed to enable switching between install/**/static and install/**/shared
-unset(CMAKE_INSTALL_PREFIX CACHE)
-
 if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
     # CMAKE_INSTALL_PREFIX was not passed as a commandline argument, therefore set it here:
+
+    # Needed to enable switching between install/**/static and install/**/shared
+    unset(CMAKE_INSTALL_PREFIX CACHE)
 
     set(CMAKE_INSTALL_PREFIX 
         ${CMAKE_BINARY_DIR}/install/${packageName}${PROJECT_VERSION}/${sharedOrStaticType}
