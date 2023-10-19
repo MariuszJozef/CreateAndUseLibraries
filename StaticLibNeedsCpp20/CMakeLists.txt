@@ -30,7 +30,7 @@ target_sources(targetStaticLib
         FILE_SET HEADERS 
         BASE_DIRS ${CMAKE_SOURCE_DIR}/StaticLibNeedsCpp20/include
         FILES 
-            include/StaticLibApi.hpp
+            ${CMAKE_CURRENT_SOURCE_DIR}/include/StaticLibApi.hpp
 )
 
 set_target_properties(targetStaticLib

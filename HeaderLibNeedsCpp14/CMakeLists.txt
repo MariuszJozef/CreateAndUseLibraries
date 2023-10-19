@@ -14,8 +14,8 @@ target_sources(targetHeaderLib
         FILE_SET HEADERS 
         BASE_DIRS ${CMAKE_SOURCE_DIR}/HeaderLibNeedsCpp14/include
         FILES 
-            include/HeaderLibApi.hpp
-            include/HeaderLib.hpp
+            ${CMAKE_CURRENT_SOURCE_DIR}/include/HeaderLibApi.hpp
+            ${CMAKE_CURRENT_SOURCE_DIR}/include/HeaderLib.hpp
 )
 
 set_target_properties(targetHeaderLib
