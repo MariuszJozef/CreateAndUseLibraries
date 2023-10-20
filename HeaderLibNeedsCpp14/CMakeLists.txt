@@ -12,7 +12,7 @@ target_include_directories(targetHeaderLib
 target_sources(targetHeaderLib
     INTERFACE
         FILE_SET HEADERS 
-        BASE_DIRS ${CMAKE_SOURCE_DIR}/HeaderLibNeedsCpp14/include
+        BASE_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/include
         FILES 
             ${CMAKE_CURRENT_SOURCE_DIR}/include/HeaderLibApi.hpp
             ${CMAKE_CURRENT_SOURCE_DIR}/include/HeaderLib.hpp

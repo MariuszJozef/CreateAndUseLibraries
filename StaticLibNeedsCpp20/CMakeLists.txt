@@ -28,7 +28,7 @@ target_sources(targetStaticLib
         src/StaticLibApi.cpp
     PUBLIC 
         FILE_SET HEADERS 
-        BASE_DIRS ${CMAKE_SOURCE_DIR}/StaticLibNeedsCpp20/include
+        BASE_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/include
         FILES 
             ${CMAKE_CURRENT_SOURCE_DIR}/include/StaticLibApi.hpp
 )
