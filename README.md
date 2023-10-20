@@ -186,7 +186,29 @@ The command `cmake --install <buildDir>` cannot be used with CMake presets (i.e.
 ```
 cmake --build --preset <presetName> --config <buildType> --target install
 ```
-Moreover, without presets with install command allows one to overwrite previously specified install directory:
+Moreover, without presets the install command allows one to overwrite previously specified install directory:
 ```
 cmake --install <buildDir> --prefix <new/install/dir/relative/current/dir>
+```
+
+For convenience here are some build, install commands that with minor modification can be copy-pasted:
+```
+cmake --preset NinjaMC-Msvc -D BUILD_SHARED_LIBS=<ON/OFF> -D CMAKE_INSTALL_PREFIX=<...>
+cmake --build --preset NinjaMC-Msvc --config Debug --target run install
+cmake --build --preset NinjaMC-Msvc --config Release --target run install
+cmake --build --preset NinjaMC-Msvc --config RelWithDebInfo --target run install
+
+OR
+
+cmake --preset NinjaMC-Gnu -D BUILD_SHARED_LIBS=<ON/OFF> -D CMAKE_INSTALL_PREFIX=<...>
+cmake --build --preset NinjaMC-Gnu --config Debug --target run install
+cmake --build --preset NinjaMC-Gnu --config Release --target run install
+cmake --build --preset NinjaMC-Gnu --config RelWithDebInfo --target run install
+
+OR
+
+cmake --preset NinjaMC-Clang -D BUILD_SHARED_LIBS=<ON/OFF> -D CMAKE_INSTALL_PREFIX=<...>
+cmake --build --preset NinjaMC-Clang --config Debug --target run install
+cmake --build --preset NinjaMC-Clang --config Release --target run install
+cmake --build --preset NinjaMC-Clang --config RelWithDebInfo --target run install
 ```
