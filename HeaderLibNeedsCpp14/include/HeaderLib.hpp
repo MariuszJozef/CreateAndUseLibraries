@@ -12,8 +12,7 @@ namespace Code
             
             auto lambda = [&x, y = -4, z = 5.6f](auto a, auto b) noexcept { x++; return x + y + z - a - b; };
 
-            std::cout << std::boolalpha 
-                << "Code::HeaderLib::InvokeLambdaCpp14Style: " 
+            std::cout << "Code::HeaderLib::InvokeLambdaCpp14Style: " 
                 << lambda(100u, 5.5) << "\n";
         }
         
