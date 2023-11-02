@@ -1,8 +1,8 @@
 # Demo of how to write CMake installable libraries: static, shared, header-only with an auto generated `<packageName>Config.cmake` installation file.
 
-Various libraries (header-only, static, shared) are created by CMake, each with its own compiler standard (C++14, C++17, C++20) because each one uses specific features available in a given C++ standard. But the libraries do not propagate that standard requirement onto projects that link these libraries. So here an executable program is made to use these libraries, and for itself it needs only to be compiled with C++11. 
+Various libraries (header-only, static, shared) are created by CMake, each with its own compiler standard (C++14, C++17, C++20) because each one uses specific features available only in the a given C++ standard. But the libraries *do not propagate that standard requirement onto projects that link these libraries*. So here an executable program is made to use these libraries, and for itself it needs only to be compiled with C++11. 
 
-The libraries are moreover packaged into an installable package with an auto generated <packageName>Config.cmake file which allows other programs (not build in this project) to easily find and link these libraries.
+The libraries are moreover packaged into an installable package with an auto generated `<packageName>Config.cmake` file which allows other programs (not build in this project) to easily find and link these libraries.
 
 Here is a sibling program that uses the `<packageName>Config.cmake` file to link and use the libraries provided here: [ImportAndUseLibraries](https://github.com/MariuszJozef/ImportAndUseLibraries.git). If this library is not preinstalled, then the sibling project will fetch this project from this repo and incorporate it into its own build.
 
